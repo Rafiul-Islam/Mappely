@@ -1,4 +1,5 @@
-mapboxgl.accessToken = "";
+mapboxgl.accessToken =
+  "pk.eyJ1IjoicmFmaXVsaXNsYW0iLCJhIjoiY2tvNWNhanowMGVwODJvbnphYTIzd290dCJ9._kjrR028KulPc55NnGooJQ";
 
 navigator.geolocation.getCurrentPosition(successLocation, errorLocation, {
   enableHighAccuracy: true,
@@ -54,6 +55,20 @@ function setupPosition(center) {
     let ans = window.confirm("Do you want to save the location ?");
     if (ans) {
       let addressName = window.prompt("Name and an address");
+
+      setTimeout(() => {
+        // var inpt = document.querySelector(
+        //   ".mapboxgl-ctrl-geocoder input[placeholder='Choose a starting place']"
+        // ).value;
+        // // console.log(inpt);
+        // document.querySelector(
+        //   ".mapboxgl-ctrl-geocoder input[placeholder='Choose a starting place']"
+        // ).value = "";
+        var b = document.querySelector(".geocoder-icon-close");
+        // console.log(b);
+        b.click();
+      }, 500);
+
       let { lat, lng } = coordinates;
 
       var fevAddress = document.getElementById("fevAddress");
