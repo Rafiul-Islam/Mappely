@@ -54,7 +54,7 @@ function setupPosition(center) {
   function addToFavourites(coordinates) {
     let ans = window.confirm("Do you want to save the location ?");
     if (ans) {
-      let addressName = window.prompt("Name and an address");
+      let addressName = window.prompt("Enter the name");
 
       setTimeout(() => {
         // var inpt = document.querySelector(
